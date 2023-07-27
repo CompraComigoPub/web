@@ -1,0 +1,35 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__menu-item-container {
+  position: relative;
+  cursor: pointer;
+  color: $white;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 2rem;
+
+  list-style-type: none;
+  transition: font-weight 0.3s;
+
+  a {
+    text-decoration: none;
+  }
+
+  &[data-selected] {
+    border-bottom: 0.2rem solid $white;
+    width: fit-content;
+    font-weight: 700;
+  }
+
+  &:hover {
+    font-weight: 700;
+  }
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

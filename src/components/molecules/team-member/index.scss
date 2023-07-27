@@ -1,0 +1,47 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__team-member-container {
+  position   : relative;
+  color      : $gray-800;
+  font-family: Poppins;
+
+  .team-member-card {
+    display      : flex;
+    align-items  : center;
+    height       : 80px;
+    width        : 256px;
+    border-radius: 20px;
+    background-color: $gray-50;
+    justify-content: center;
+
+  }
+
+  .team-member-content {
+    margin-left: 1rem;
+    display       : flex;
+    flex-direction: column;
+
+    #name {
+      font-weight: bold;
+      font-size  : 16px;
+      line-height: 16px;
+      margin-bottom: 8px;
+
+    }
+
+    #company-name {
+      font-size  : 12px;
+      line-height: 8px;
+    }
+  }
+
+
+
+
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

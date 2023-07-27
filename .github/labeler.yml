@@ -1,0 +1,33 @@
+- name: Labeler
+  uses: actions/labeler@2.2.0
+  test:
+    - components/**/__tests__/*.js
+    - components/**/__tests/*.js
+    - components/**/_tests/*.js
+    - ./**/*.test.js
+  config:
+    - ./*
+    - ./.github/**/*
+    - ./.storybook/**/*
+  atom:
+    - components/atoms/*
+    - components/atoms/**/*
+  molecule:
+    - components/molecules/*
+    - components/molecules/**/*
+  organism:
+    - components/organisms/*
+    - components/organisms/**/*
+  page:
+    - components/pages/*
+    - components/pages/**/*
+  icon:
+    - components/icons/*
+    - components/icons/**/*
+  utils:
+    - components/utils/*
+    - components/utils/**/*
+    - ./utils/**/*
+  tools:
+    - components/bin/*
+    - components/bin/**/*

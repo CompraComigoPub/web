@@ -1,0 +1,37 @@
+@import '_colors';
+@import '_mixins';
+
+.page__purchaseJoin-container {
+  .main-area {
+    #area {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  #conclusion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hidden {
+    display: none!important;
+  }
+
+  .step-container {
+    min-height: 30rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+  }
+}

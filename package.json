@@ -1,0 +1,92 @@
+{
+  "name": "compra-comigo",
+  "version": "0.1.1",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
+    "@brainhubeu/react-carousel": "^1.19.26",
+    "@react-pdf/renderer": "^2.0.18",
+    "@storybook/addon-a11y": "^6.0.26",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "apollo-upload-client": "^16.0.0",
+    "axios": "^0.21.1",
+    "cep-promise": "^4.1.1",
+    "cpf-cnpj-validator": "^1.0.3",
+    "date-fns": "^2.22.1",
+    "dotenv": "^10.0.0",
+    "dotenv-cli": "^4.0.0",
+    "firebase": "^8.6.8",
+    "graphql": "^15.3.0",
+    "html-to-image": "^1.7.0",
+    "html2canvas": "^1.3.2",
+    "js-cookie": "^3.0.1",
+    "jspdf": "^2.3.1",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.3.1",
+    "react-hook-form": "^7.10.1",
+    "react-icons": "^4.2.0",
+    "react-paginate": "^7.1.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-toastify": "^7.0.4",
+    "storybook-addon-designs": "^5.4.2",
+    "storybook-addon-jsx": "^7.3.4",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "dotenv": "dotenv -e .env -- node test.js",
+    "set-env": "export $(cat .production.env | grep \"^[^#;]\" |xargs)",
+    "set-env:dev": "export $(cat .env | grep \"^[^#;]\" |xargs)",
+    "set-env:test": "export $(cat .test.env | grep \"^[^#;]\" |xargs)",
+    "start": " dotenv -e .env -- react-scripts start",
+    "start:dev": "dotenv -e .env -- react-scripts start",
+    "dev": "dotenv -e .env -- react-scripts start",
+    "build": "dotenv -e .env -- react-scripts build",
+    "storybook": "dotenv -e .env -- start-storybook -p 9009 -s public",
+    "sb": "yarn storybook",
+    "build-storybook": "dotenv -e .env -- build-storybook -s public",
+    "creator": "node ./bin/create/index.js",
+    "creator:icons": "node node_modules/@svgr/cli/bin/svgr -d ./src/components/icons ./docs/icons",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/node-logger": "^6.0.26",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/preset-scss": "^1.0.2",
+    "@storybook/react": "^6.0.26",
+    "@svgr/cli": "^5.4.0",
+    "babel-loader": "^8.1.0",
+    "copy-dir": "^1.3.0",
+    "css-loader": "^4.3.0",
+    "prettier": "^2.2.1",
+    "react-is": "^16.13.1",
+    "react-snap": "^1.23.0",
+    "replace-terms-in-files": "^1.0.3",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1"
+  }
+}

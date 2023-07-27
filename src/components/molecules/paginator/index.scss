@@ -1,0 +1,49 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__paginator-container {
+  position: relative;
+  
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    cursor: pointer;
+    margin-top: 3.5rem;
+    gap: .5rem;
+  }
+
+  .pagination a {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $gray-200;
+    color: $gray-600;
+
+    min-width: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pagination__link {
+    font-weight: bold;
+  }
+  
+  .pagination__link--active a {
+    color: #fff;
+    background: $primary;
+  }
+  
+  .pagination__link--disabled a {
+    color: rgb(198, 197, 202);
+    border: 1px solid $gray-200; //rgb(198, 197, 202);
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

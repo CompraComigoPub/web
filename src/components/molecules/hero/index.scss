@@ -1,0 +1,80 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__hero-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 20rem;
+  margin-right: -10rem;
+  width: 100%;
+
+  .wrapper-texts-buttons {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin: 1rem 0;
+    }
+
+    p {
+      width: 30rem;
+    }
+  }
+
+  .hero-img {
+    margin-top: 5rem;
+    margin-left: 8rem;
+    height: auto;
+    max-width: 70%;
+    // transform: rotateY(-25deg) rotateX(15deg);
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.31), 0 11px 20px -8px rgba(0,0,0,0.25);
+    backface-visibility: hidden;
+  }
+
+  .buttons {
+    display: flex;
+    margin-left: -1rem;
+  }
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    flex-direction: row;
+
+    .wrapper-texts-buttons {
+      display: flex;
+
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: left;
+
+      h1 {
+        margin: 1rem 0;
+      }
+  
+      p {
+        width: 52rem;
+      }
+    }
+
+    .hero-img {
+      margin-top: 0;
+      margin-left: 8rem;
+      height: auto;
+      max-width: 90%;
+      // transform: rotateY(-25deg) rotateX(15deg);
+      box-shadow: 0 0 1px 0 rgba(0,0,0,0.31), 0 11px 20px -8px rgba(0,0,0,0.25);
+      backface-visibility: hidden;
+    }
+  }
+
+  @include gt-desktop {
+    .hero-img {
+      margin-left: 10rem;
+    }
+  }
+}

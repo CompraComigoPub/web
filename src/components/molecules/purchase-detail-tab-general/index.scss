@@ -1,0 +1,40 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__purchase-detail-tab-general-container {
+  position: relative;
+  padding: 3.2rem;
+  text-align: justify;
+
+  font-family: Poppins;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: $gray-800;
+  
+  .tags-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > * {
+      margin: 0 .8rem .8rem 0;
+    }
+  }
+
+  .card-divider {
+    @include card-divider;
+    margin: 3.2rem 0 1.6rem 0;
+  }
+
+  .image-spacer {
+    margin-bottom: 2.4rem;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

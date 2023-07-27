@@ -1,0 +1,16 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__joined-order-container {
+  position: relative;
+  margin-top : 50px;
+  // TODO: add default styles (usually focused on phones)
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

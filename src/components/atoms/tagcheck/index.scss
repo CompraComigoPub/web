@@ -1,0 +1,60 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__tagcheck-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-400;
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: $gray-200;
+
+    svg {
+      fill: $gray-400;
+    }
+  }
+
+  &[data-checked] {
+    color: $black;
+
+    .icon-container {
+      background-color: $alert-green-opacity;
+
+      svg {
+        fill: $alert-green;
+      }
+
+      &[data-primary] {
+        background-color: $primary;
+
+        svg {
+          fill: $white;
+        }
+      }
+      &[data-secondary] {
+        background-color: $alert-orange-opacity;
+
+        svg {
+          fill: $alert-orange;
+        }
+      }
+    }
+  }
+
+  .label-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    // width: 16rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.4rem;;
+  }
+}

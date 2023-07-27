@@ -1,0 +1,52 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include zIndex(9, 5);
+  display: none;
+
+  &[data-open] {
+    display: grid;
+  }
+  
+  .modal-card {
+    position: absolute;
+    place-self: center center;
+    height: fit-content;
+    width: fit-content;
+    min-width: 230px;
+    max-width: 1280px;
+    @include zIndex(9, 5);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  // .modal-body-container {
+    
+  // }
+
+  .bg-layer {
+    background-color: #000a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include zIndex(9, 1);
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

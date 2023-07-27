@@ -1,0 +1,15 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__brand-container {
+  position: relative;
+  // TODO: add default styles (usually focused on phones)
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

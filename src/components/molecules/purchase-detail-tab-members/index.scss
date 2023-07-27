@@ -1,0 +1,49 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__purchase-detail-tab-members-container {
+  position: relative;
+  padding : 30px;
+  
+  > :not(:last-child) { border-bottom: solid .1rem $gray-200; }
+  
+  .company-card {
+    display: grid;
+    padding: 2.4rem 0;
+    grid-template-columns: 5.8rem auto;
+    grid-template-rows: 2.4rem 2.4rem;
+    grid-template-areas: 
+      "avatar name"
+      "avatar role";
+  }
+
+  .avatar {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: $gray-800;
+  }
+
+  .role {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: $gray-800;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

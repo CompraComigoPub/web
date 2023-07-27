@@ -1,0 +1,197 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__invite-container {
+  position   : relative;
+  font-family: Poppins;
+
+  .card-content {
+    padding       : 32px;
+    border-radius : 8px;
+    display       : flex;
+    flex-direction: column;
+
+    .close-button {
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      right: 4rem;
+      top: 3rem;
+      // display        : flex;
+      // justify-content: flex-end;
+      // cursor: pointer;
+    }
+  }
+
+  .card-title {
+    display       : flex;
+    flex-direction: column;
+
+    #title {
+      font-size  : 3.2rem;
+      font-weight: 700;
+      color      : $primary;
+    }
+
+    #subtitle {
+      font-size  : 1.4rem;
+      font-weight: 400;
+      color      : black;
+    }
+  }
+
+  .cards {
+    cursor: pointer;
+
+    span {
+      color      : $primary;
+      font-size  : 2.4rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-family: Poppins;
+      font-size  : 1.4rem;
+      font-weight: 400;
+      line-height: 1.6rem;
+      color      : gray-400;
+      width      : 48.2rem;
+      height     : 3.2rem;
+    }
+
+    .card-item {
+      display         : flex;
+      justify-content : space-between;
+      align-items     : center;
+      width           : 74.4rem;
+      height          : 13.6rem;
+      border          : 2px solid #E0E0E0;
+      border-radius   : 1rem;
+      background-color: $white;
+      padding         : 3.2rem;
+      margin-top      : 2.4rem;
+
+      &[data-selected] {
+        border: 2px solid $primary;
+
+        .icon-container {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .forms {
+    display        : flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .molecule__input-set-container {
+      width        : 36.2rem;
+      height       : 4.8rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .confirmation {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    text-overflow: ellipsis;
+
+    #title {
+      font-size  : 2.4rem;
+      font-weight: 700;
+      text-align : center;
+      margin-top : 2rem;
+      color      : $primary;
+    }
+
+    #subtitle {
+      font-size  : 1.4rem;
+      font-weight: 400;
+      text-align : center;
+      color      : $black;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        margin-left: auto;
+        margin-right: auto !important;
+        margin-bottom: 0!important;
+        width: 32.8rem;
+      }
+    }
+  }
+
+  .button {
+    width          : 100%;
+    display        : flex;
+    justify-content: flex-start;
+
+    #email{
+      
+    }
+  }
+
+  button {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    border-radius   : 1rem;
+    border          : none;
+    padding         : 1.2rem, 2.4rem, 1.2rem, 2.4rem;
+    font-family     : Poppins;
+    font-size       : 16px;
+    font-style      : normal;
+    color           : $white;
+    background-color: $primary;
+    margin-top      : 26px;
+    padding         : 12px;
+    font-weight     : 600;
+    cursor          : pointer;
+
+    &[disabled] {
+      background-color: $gray-200 !important;
+    }
+  }
+
+  .icon-container {
+    display         : none;
+    background-color: $primary;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &[data-selected] {
+    .cards {
+      .card-item {
+        border: 2px solid $primary;
+      }
+    }
+
+    .icon-container {
+      display: flex;
+    }
+  }
+
+  &[data-type="confirm"] {
+
+    .button,
+    .icon-container {
+      display        : flex;
+      justify-content: center;
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

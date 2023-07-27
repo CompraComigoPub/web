@@ -1,0 +1,91 @@
+@import '_colors';
+
+.atom-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  
+  background-color: $gray-200;
+
+  &[data-primary] {
+    background-color: $primary-dark;
+  }
+
+  &[data-type="image"] {
+    &[data-size="1"] {
+      width: 245px;
+      height: 160px;
+    }
+    &[data-size="2"] {
+      width: 158px;
+      height: 110px;
+    }
+    &[data-size="3"] {
+      width: 308px;
+      height: 100px;
+    }
+    &[data-size="4"] {
+      width: 95px;
+      height: 88px;
+    }
+    &[data-size="5"] {
+      width: 34.5rem;
+      height: 24rem;
+    }
+
+    &[data-size="6"] {
+      width: 17rem;
+      height: 13.2rem;
+    }
+  }
+
+  &[data-type="text"] {
+    height: 1.8rem;
+    margin: 9px 0;
+
+    &[data-size="1"] {
+      width: 245px;
+    }
+    &[data-size="2"] {
+      width: 158px;
+    }
+    &[data-size="3"] {
+      width: 308px;
+    }
+    &[data-size="4"] {
+      width: 195px;
+    }
+  }
+
+  &[data-animated="1"] {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 20%;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      box-shadow: 0 0 30px 30px #fff;
+      background: #fff;
+      opacity: .5;
+      z-index: 9;
+      transform: translateX(100%) skewX(-20deg);
+      animation: slide-loading-placeholder infinite linear 5s;
+    }
+  }
+}
+
+@keyframes slide-loading-placeholder {
+  from {
+    // left: -40px;
+    transform: translateX(-100px) skewX(-20deg);
+  }
+  to {
+    // left: calc(100% + 40px);
+    transform: translateX(calc(100% + 30rem)) skewX(-20deg);
+  }
+}

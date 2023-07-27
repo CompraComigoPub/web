@@ -1,0 +1,80 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__base-card-container {
+  @include card-paper;
+  position       : relative;
+  // border-radius  : 10px;
+  // cursor         : pointer;
+  // background     : $white;
+  font-family    : 'Poppins';
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  width          : fit-content;
+  min-width      : 4.8rem;
+  min-height     : 4.8rem;
+
+  &[data-has-click] {
+    cursor: pointer;
+  }
+
+  h2{
+    color: $primary;
+  }
+
+  &:NOT([data-full]) {
+    .card-content {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+    }
+  }
+
+  &[data-full] {
+    width: 100%;
+
+    .card-content {
+      width: 100%;
+    }
+  }
+
+  &[data-badge] {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    background-color: $white;
+    // width          : 4.8rem;
+    // height         : 4.8rem;
+
+    .dot-purple-icon {
+      display: block;
+    }
+
+    &[data-select] {
+      border: none;
+
+      .dot-purple-icon {
+        display    : block;
+        margin-left: 40px;
+      }
+
+    }
+  }
+
+  .dot-purple-icon {
+    display : none;
+    position: absolute;
+    right   : -.3rem;
+    top     : -.3rem;
+  }
+
+  &[data-select] {
+    border: 3px solid $primary;
+
+    .dot-purple-icon {
+      display: none;
+    }
+  }
+}

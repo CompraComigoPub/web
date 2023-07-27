@@ -1,0 +1,40 @@
+@import '_colors';
+
+.page__Layout-container {
+  display: grid;
+  grid-template-columns: 328px auto;
+  min-height: 100%;
+
+
+  &[data-current-page-type] {
+    grid-template-columns: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-container{
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+
+  }
+
+  .main-area {
+    background-color: $gray-client-2;
+    overflow: auto;
+
+    &>main {
+      // padding: 0 1rem;
+      padding-bottom: 5rem;
+    }
+
+    .header-el {
+      position: sticky;
+      top: 0;
+    }
+  }
+}

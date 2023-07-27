@@ -1,0 +1,74 @@
+@import "_colors";
+@import "_mixins";
+
+.organism__notification-bar-container {
+  position: fixed;
+  z-index:  99;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  font-family: Poppins;
+  pointer-events: none;
+
+  &[data-active] {
+    pointer-events: all;
+
+    .notification-bar-container {
+      transform: translateX(0);
+    }
+  }
+
+  .notification-bar-container {
+    pointer-events: all;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height : 100vh;
+    overflow: auto;
+    overflow-x : hidden;
+    width: 39.2rem;
+    background-color: $gray-100;
+    transition: transform linear 0.3s;
+    transform: translateX(100%);
+
+    .notification-head {
+      width: 39.2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 2.4rem;
+
+      span {
+        color: $primary;
+        font-size: 2rem;
+        margin-left: -5rem;
+      }
+    }
+
+    hr {
+      color: $gray-200;
+    }
+
+    .footer {
+      margin-top: 1.6rem;
+
+      span {
+        color: $black;
+        text-decoration-line: underline;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .exit-btn {
+    cursor: pointer;
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

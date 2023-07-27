@@ -1,0 +1,121 @@
+@import '_colors';
+@import '_mixins';
+
+.page__registration-approval-container {
+  position: relative;
+
+  h2{
+    color: $primary;
+    margin-bottom: 15px;
+  }
+
+  img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  hr{
+    height: 1px;
+    width: 100%;
+    opacity: 30%;
+    margin-bottom: 25px;
+  }
+
+  button {
+    margin-right: 20px;
+
+  }
+
+  .observation-area {
+
+    textarea {
+      margin-top: 8px;
+      width: 100%;
+      margin-bottom: 25px;
+      background: rgba(255, 255, 255, 1);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $gray-400;
+      border: 1px solid $gray-200;
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-family: Poppins;
+      padding-top: 26px;
+      padding-left: 16px;
+      resize: none;
+    }
+
+    small{
+      display: none;
+    }
+  
+  
+  }
+
+  .red{
+    color: red !important;
+
+    span{
+      color: red !important;
+    }
+    
+    textarea{
+      border: 1px solid red;
+      margin-bottom: 0px;
+
+      &:focus{
+        outline: none;
+      }
+      
+    }
+    ::placeholder{
+      color: red;
+    }
+
+    small{
+      display: block;
+      margin-bottom: 25px;
+    }
+
+  }
+
+
+  
+  #card{
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    div{
+      width: 50%;
+    }
+
+    section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  }
+
+  #action-zone{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 15px;
+
+    a{
+      margin-right: 25px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

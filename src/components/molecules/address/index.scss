@@ -1,0 +1,56 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__address-container {
+  position        : relative;
+  height          : 93.2rem;
+  width           : 94.4rem;
+  background-color: $white;
+  border-radius   : 1rem;
+  box-shadow      : 0px 2px 0px rgba(164, 164, 164, 0.25), 0px 4px 24px rgba(0, 0, 0, 0.05);
+  font-family     : Poppins;
+
+
+  .form-container {
+    margin: 3.2rem;
+
+    hr {
+      margin-top: 3.2rem;
+      border    : 1px solid #E0E0E0;
+      transform : rotate(0.13deg);
+    }
+
+    .address {
+      display        : flex;
+      justify-content: space-between;
+      min-width      : 28rem;
+      flex-wrap      : wrap;
+
+      input {
+        min-width : 27rem;
+        margin-top: .8rem;
+      }
+    }
+
+    .card-title {
+      margin-top : 3.2rem;
+      font-family: Poppins;
+      font-size  : 1.8rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+      color      : $primary;
+    }
+
+    .cards {
+      display        : flex;
+      justify-content: space-between;
+      margin-top     : 2.4rem;
+    }
+
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

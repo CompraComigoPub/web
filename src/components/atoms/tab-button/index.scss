@@ -1,0 +1,39 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__tab-button-container {
+  position: relative;
+
+  .bullet {
+    display: grid;
+    place-items: center;
+    height: 4.8rem;
+    border-radius: 2.4rem;
+    padding: 0 2.8rem;
+    cursor: pointer;
+  }
+  
+  .selected {
+    background-color: $primary;
+
+    .label {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+  
+  .label {
+    font-family: Poppins;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

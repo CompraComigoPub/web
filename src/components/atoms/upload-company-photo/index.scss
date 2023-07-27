@@ -1,0 +1,39 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__upload-company-photo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .profile-pic, #pic{
+    border: 2px solid $primary;
+    border-radius: 50%;  
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p{
+    color: $primary;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+
+  input{
+    display: none;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

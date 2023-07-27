@@ -1,0 +1,19 @@
+@import '_colors';
+@import '_mixins';
+
+.page__publications-container {
+  position: relative;
+
+  h2{
+    margin-bottom: 25px;
+  }
+  
+  .card{
+    background-color: white;
+    border-radius: 10px;
+  }
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

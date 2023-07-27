@@ -1,0 +1,24 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__carousel-container {
+  position: relative;
+  overflow: visible;
+
+  .BrainhubCarousel__container {
+    width: calc(100% + 8rem);
+    margin: 0 -4rem;
+  }
+
+  .BrainhubCarousel__arrows {
+    border-radius: 50%;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

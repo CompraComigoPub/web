@@ -1,0 +1,185 @@
+@import 'App.scss';
+
+$first-grid-col: 140px;
+
+.colors-container {
+  margin: 10px;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: $first-grid-col repeat(6, 50px);
+  text-align: center;
+  margin: 20px 0;
+}
+
+.grid {
+  .line {
+    display: grid;
+    grid-template-columns: $first-grid-col repeat(6, 50px);
+    margin: 10px 0;
+
+    &.background {
+      .square.s-1 {
+        // background-color: $color-background-1;
+      }
+      .square.s-2 {
+        // background-color: $color-background-2;
+      }
+      .square.s-3 {
+        // background-color: $color-background-3;
+      }
+      .square.s-4 {
+        border: 0;
+      }
+      .square.s-5 {
+        border: 0;
+      }
+      .square.s-6 {
+        border: 0;
+      }
+    }
+
+    &.base {
+      .square.b-1 {
+        // background-color: $color-base-1;
+      }
+      .square.b-2 {
+        // background-color: $color-base-2;
+      }
+      .square.b-3 {
+        // background-color: $color-base-3;
+      }
+      .square.b-4 {
+        // background-color: $color-base-4;
+      }
+      .square.b-5 {
+        // background-color: $color-base-5;
+      }
+      .square.b-6 {
+        // background-color: $color-base-6;
+      }
+    }
+    &.primary {
+      .square.p-1 {
+        // background-color: $color-primary-1;
+      }
+      .square.p-2 {
+        // background-color: $color-primary-2;
+      }
+      .square.p-3 {
+        // background-color: $color-primary-3;
+      }
+      .square.p-4 {
+        // background-color: $color-primary-4;
+      }
+      .square.p-5 {
+        // background-color: $color-primary-5;
+      }
+      .square.p-6 {
+        border: 0;
+      }
+    }
+    &.secondary {
+      .square.sc-1 {
+        // background-color: $color-secondary-1;
+      }
+      .square.sc-2 {
+        // background-color: $color-secondary-2;
+      }
+      .square.sc-3 {
+        // background-color: $color-secondary-3;
+      }
+      .square.sc-4 {
+        // background-color: $color-secondary-4;
+      }
+      .square.sc-5 {
+        // background-color: $color-secondary-5;
+      }
+      .square.sc-6 {
+        border: 0;
+      }
+    }
+    &.warning {
+      .square.w-1 {
+        // background-color: $color-warning;
+      }
+      .square.w-2 {
+        border: 0;
+      }
+      .square.w-3 {
+        border: 0;
+      }
+      .square.w-4 {
+        border: 0;
+      }
+      .square.w-5 {
+        border: 0;
+      }
+      .square.w-6 {
+        border: 0;
+      }
+    }
+    &.danger {
+      .square.d-1 {
+        // background-color: $color-danger;
+      }
+      .square.d-2 {
+        border: 0;
+      }
+      .square.d-3 {
+        border: 0;
+      }
+      .square.d-4 {
+        border: 0;
+      }
+      .square.d-5 {
+        border: 0;
+      }
+      .square.d-6 {
+        border: 0;
+      }
+    }
+    &.success {
+      .square.suc-1 {
+        // background-color: $color-success-1;
+      }
+      .square.suc-2 {
+        // background-color: $color-success-2;
+      }
+      .square.suc-3 {
+        border: 0;
+      }
+      .square.suc-4 {
+        border: 0;
+      }
+      .square.suc-5 {
+        border: 0;
+      }
+      .square.suc-6 {
+        border: 0;
+      }
+    }
+
+
+    .label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-right: solid 1px #d0d0d0;
+      margin-right: 10px;
+    }
+  }
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 1px #d0d0d0;
+}
+
+.x1 {
+  // background-color: $color-secondary-1;
+}

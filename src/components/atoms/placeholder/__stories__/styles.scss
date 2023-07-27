@@ -1,0 +1,11 @@
+.placeholders-container {
+  box-shadow: 0 0 10px #d0d0d0;
+  padding: 40px;
+  margin: 40px;
+
+  &.images {
+    display: flex;
+    width: 900px;
+    justify-content: space-evenly;
+  }
+}

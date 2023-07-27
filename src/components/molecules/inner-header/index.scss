@@ -1,0 +1,40 @@
+@import '_colors';
+@import '_mixins';
+
+
+.notification-operator {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.molecule__inner-header-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 30rem 0rem;
+  gap: 1rem;
+  min-height: 68px;
+
+
+  button {
+    font-family     : Poppins;
+    font-size       : 16px;
+    font-style      : normal;
+    letter-spacing: 0.01em;
+    text-transform: unset;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  [data-hide] {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s linear;
+  }
+
+  [data-hide="0"] {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

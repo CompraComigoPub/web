@@ -1,0 +1,31 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__seller-budget-conclusion-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .green{
+    color: #48BE00;
+  }
+
+  .red{
+    color: #FF0000;
+
+    circle{
+     fill:#FFD7D7; 
+    }
+    path{
+      fill:#FF0000;
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

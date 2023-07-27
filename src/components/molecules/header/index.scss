@@ -1,0 +1,44 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__header-container {
+  position: fixed;
+  
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0 4rem;
+
+  background-color: $primary;
+  color: $white;
+  font-weight: 500;
+
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+
+  .wrapper-icon {
+    margin: 1rem 0;
+
+    svg {
+      color: $white;
+      width: 7rem;
+    }
+  }
+
+  .wrapper-menu {
+    width: 25rem;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    flex-direction: row;
+  }
+}

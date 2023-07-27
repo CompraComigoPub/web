@@ -1,0 +1,144 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__form-categories-container {
+  position: relative;
+  // TODO: add default styles (usually focused on phones)
+  .categories-content {
+    padding: 20px;
+
+  };
+  span {
+    margin-bottom : 20px;
+  }
+
+  .item-catalog-container{
+    min-height          : 168px;
+    // width           : 880px;
+    background-color: $white;
+    border          : 1px solid $gray-200;
+    box-sizing      : border-box;
+    margin          : 16px 0 16px 0;
+    border-radius   : 10px;
+    display         : flex;
+    justify-content : space-around;
+    align-items     : center;
+    cursor          : pointer;
+
+    &[data-select] {
+      border       : 1px solid $primary;
+      box-sizing   : border-box;
+      border-radius: 10px;
+
+      .tag-selected {
+        // display: block;
+        visibility: visible;
+      }
+    }
+
+    .item-content {
+      margin: 24px;
+      max-width: 23rem;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+
+    .tag-selected {
+      margin-right: 32px;
+    }
+
+    .tag-selected {
+      // display: none;
+      visibility: hidden;
+    }
+
+    .item-counter {
+      width: 140px;
+      p {
+        text-align: center;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: Poppins;
+      }
+    }
+
+    .panel{
+
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      justify-content: space-between;
+
+      button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $primary;
+        color: white;
+        cursor: pointer;
+        font-size: 24px;
+      }
+      p{
+          cursor: auto;
+          margin-right: 10px;
+          margin-left: 10px;
+          font-size: 20px;
+        }
+    }
+
+    .item-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 0;
+
+      .name-detail {
+        color      : gray-800;
+        font-size  : 18px;
+        font-weight: bold;
+        font-style : normal;
+        font-weight: 700;
+        line-height: 24px;
+        text-align : left;
+      }
+
+      .name-detail-without-image {
+        font-size     : 24px;
+        font-weight   : 700;
+        line-height   : 32px;
+        letter-spacing: 0em;
+        text-align    : left;
+      }
+
+
+      .content {
+        // height     : 60px;
+        width      : 580px;
+        top        : 56px;
+        color      : $gray-400;
+        font-size  : 12px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      .content-without-image {
+        color         : $gray-400;
+        font-size     : 12px;
+        font-weight   : 400;
+        line-height   : 16px;
+        letter-spacing: 0px;
+        text-align    : left;
+      }
+
+    }
+  }
+
+}

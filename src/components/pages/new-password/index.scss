@@ -1,0 +1,22 @@
+@import '_colors';
+@import '_mixins';
+
+.page__new-password-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+
+  .main-area {
+    display: flex;
+    align-items:center;
+    width: 75vw;
+    background-color: white;
+  }
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

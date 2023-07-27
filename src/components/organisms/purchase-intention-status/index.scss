@@ -1,0 +1,60 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__purchase-intention-status-container {
+  position: relative;
+  font-family: Poppins;
+
+  .title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 1.6rem;
+    color: $primary;
+  }
+
+  .cards-container {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(3, 1fr);
+    text-transform: uppercase;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2.4rem 0;
+
+      .highlight {
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        margin-bottom: .4rem;
+      }
+  
+      .description {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: $gray-400;
+      }
+  
+      .primary {
+        color: $primary;
+      }
+  
+      .green {
+        color: $alert-green;
+      }
+
+    }
+
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

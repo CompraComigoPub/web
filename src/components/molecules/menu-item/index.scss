@@ -1,0 +1,91 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__menu-item-container {
+  width        : 256px;
+  height       : 56px;
+  font-family  : Poppins;
+  font-size    : 14px;
+  font-weight  : 400;
+  color        : $gray-400;
+  border-radius: 10px;
+  margin-top   : 5px;
+  cursor       : pointer;
+
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+
+  .icon path {
+    fill: $secondary;
+  }
+
+  .menu-content-container {
+    display  : flex;
+    flex-grow: 1;
+
+    .menu-content {
+      display  : flex;
+      flex-grow: 1;
+
+      .icon {
+        margin-left: 16px;
+      }
+
+      .menu-text {
+        margin-left: 24px;
+      }
+
+      .badge-container {
+        display        : flex;
+        flex-grow      : 1;
+        justify-content: flex-end;
+      }
+
+      .badge {
+        margin-right    : 10px;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        border-radius   : 100px;
+        background-color: $primary;
+        color           : $white;
+        font-size       : 12px;
+        height          : 24px;
+        width           : 24px;
+      }
+
+    }
+  }
+
+  &[data-badge] {
+    .badge-container {
+      .badge {
+        display: none;
+      }
+    }
+
+  }
+
+  &[data-select] {
+    background: $primary;
+    color     : $white;
+
+    .badge-container {
+      .badge {
+        margin-right    : 10px;
+        background-color: $white;
+        color           : $primary;
+      }
+    }
+
+    .icon path {
+      fill: $white;
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

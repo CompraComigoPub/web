@@ -1,0 +1,270 @@
+@import "_colors";
+@import "_mixins";
+
+.molecule__characteristics-container {
+  position: relative;
+  // height          : 932px;
+  // width           : 944px;
+  // background-color: $white;
+  // border-radius   : 10px;
+  // box-shadow: 0px 2px 0px rgba(164, 164, 164, 0.25),
+  //   0px 4px 24px rgba(0, 0, 0, 0.05);
+  // border-radius   : 10px;
+  font-family: Poppins;
+  margin-bottom: 30px;
+  border-radius: 10px !important;
+
+  #add-info{
+    display: flex;
+    flex-wrap: wrap;
+
+    input,select{
+      margin-right: 1rem;
+      margin-top: 8px;
+    }
+
+    input[type=textarea]{
+      width: 100%;
+    }
+  }
+
+  #separator{
+    margin-bottom: 32px !important;
+  }
+
+  .infos{
+    width: 67%;
+    display: flex;
+    flex-wrap: wrap;
+
+    div{
+      margin-right: 1rem !important;
+    }
+  }
+
+  // #form-item {
+  //   background-color: $white;
+  //   width: 100% !important;
+  //   padding: 30px;
+  //   border-radius: 10px;
+  // }
+
+
+  #close-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+    #down{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary;
+      border-radius: 50%;
+      fill: white;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    #up{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary;
+      border-radius: 50%;
+      fill: white;
+      width: 30px;
+      height: 30px;
+      transform: scaleY(-1);
+      cursor: pointer;
+    }
+  }
+
+  #form-item-close{
+    background-color: $white;
+    width: 100% !important;
+    padding: 30px;
+    border-radius: 10px;
+    height: 90px;
+    overflow: hidden;
+  }
+  #form-item-open{
+    background-color: $white;
+    width: 100% !important;
+    padding: 30px;
+    border-radius: 10px;
+    height: unset;
+  }
+
+  #back-button {
+    position: absolute;
+    bottom: 0px;
+    right: 130px;
+  }
+
+  #back-button {
+    position: absolute;
+    bottom: 0px;
+    right: 150px;
+  }
+
+  #form-button {
+    position : relative;
+    background-color: transparent;
+    border: none;
+    color: $white;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .form-container {
+    // padding: 30px;
+    #title {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 24px;
+      color: $primary;
+      margin-top: 32px;
+    }
+
+    .title,
+    .financial-title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: $primary;
+      margin-top: 32px;
+    }
+
+    .infos {
+      margin-top: 24px;
+      display: flex;
+
+      input,
+      select {
+        min-width: 270px;
+        margin-top: 8px;
+      }
+
+      .molecule__input-set-container:first-child {
+        margin-right: 1rem;
+      }
+    }
+
+    .observation-area {
+      margin-top: 20px;
+
+      #observation-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $black;
+        margin-bottom: 8px;
+      }
+
+      textarea {
+        margin-top: 8px;
+        width: 100%;
+        background: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $gray-400;
+        border: 1px solid $gray-200;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-family: Poppins;
+        padding-top: 26px;
+        padding-left: 16px;
+        resize: none;
+      }
+    }
+
+    hr {
+      margin-top: 32px;
+      border: 1px solid #e0e0e0;
+      transform: rotate(0.13deg);
+    }
+
+    .financial-infos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      input,
+      select {
+        min-width: 270px;
+        margin-top: 8px;
+      }
+
+      .financial-title {
+        margin-top: 32px;
+      }
+
+      .molecule__input-set-container {
+        margin-right: 1rem;
+      }
+    }
+
+    .terms {
+      width: 600px;
+      height: 32px;
+      font-size: 14px;
+      line-height: 25px;
+      color: $black;
+      margin-top: 21px;
+
+      #terms-label {
+        // margin-left: 38px;
+      }
+    }
+
+    .supplies {
+      margin-top: 32px;
+
+      .supplies-labels {
+        display: flex;
+      }
+
+      .supplies-inputs {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .row {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            font-weight: bold;
+            font-size: 1.4rem;
+          }
+        }
+
+        input {
+          min-width: 270px;
+          margin-top: 8px;
+          border-radius: 1rem;
+          border: solid 1px $gray-200;
+          height: 4.8rem;
+          padding: 1rem;
+        }
+      }
+
+      .molecule__input-set-container {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

@@ -1,0 +1,50 @@
+@import "_colors";
+@import "_mixins";
+
+.organism__form-products-container {
+  position: relative;
+
+  .step-container {
+    padding: 2rem;
+  }
+
+  #form-button {
+    width: 15%;
+    align-self: flex-end;
+  }
+
+  .icon-container {
+    width: 5.2rem;
+    height: 5.2rem;
+  }
+
+  #back-button {
+    position: absolute;
+    bottom: 0px;
+    right: 150px;
+  }
+
+  .category-container {
+    display: flex;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $gray-800;
+
+    * {
+      margin: 3rem .8rem .8rem 0;
+    }
+  }
+  // .catalog-list-container {
+  // max-height: 100rem;
+  // overflow: auto;
+  // }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

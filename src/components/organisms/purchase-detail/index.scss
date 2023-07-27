@@ -1,0 +1,33 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__purchase-detail-container {
+  position: relative;
+
+  .spacer {
+    margin-bottom: 2.4rem !important;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    // padding: 3.2rem;
+    width: 100%;
+    
+    > * {
+      width: 100%;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

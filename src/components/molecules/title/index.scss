@@ -1,0 +1,56 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__title-container {
+  display: flex;
+  flex-direction: column;
+
+  &[data-separator] {
+    border-bottom: solid 1px $gray-fade;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .big-title, .medium-title {
+    font-family: Poppins;
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: .5rem;
+  }
+
+  strong {
+    color: $primary;
+  }
+
+  .big-title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .medium-title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+
+  .big-subtitle {
+    font-family: Poppins;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $gray-800;
+  }
+
+  .medium-subtitle {
+    font-family: Poppins;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $gray-400;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

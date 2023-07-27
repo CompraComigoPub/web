@@ -1,0 +1,16 @@
+.page__budgetDetail-container {
+  #button-zone {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+    button:first-child {
+      margin-right: 15px;
+      background-color: #48be00;
+    }
+  }
+  
+  .card-container {
+    padding: 2rem;
+  }
+}

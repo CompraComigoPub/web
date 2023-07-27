@@ -1,0 +1,77 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__seller-request-action-container {
+  position: relative;
+  #button{
+    background-color:#48BE00 !important ;
+    margin-left: 40px;
+  }
+
+  .black{
+    color: black;
+  }
+
+  .green{
+    color: #48BE00;
+  }
+
+  .red{
+    color: #FF0000;
+  }
+
+  .orange{
+    color: $alert-orange;
+  }
+
+  #base{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .row{
+      display: flex;
+      justify-content: space-between;
+
+      h2{
+        font-size: 14pt;
+      }
+
+      #wait{
+        text-align: center;
+      }
+
+      p{
+        font-size: 12pt;
+        margin: 0px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  hr{
+    opacity: 30%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    height: 1px;
+    width: 100%;
+  }
+
+  section{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div{
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+    
+  }
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

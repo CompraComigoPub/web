@@ -1,0 +1,73 @@
+@import "_colors";
+@import "_mixins";
+
+.molecule__notification-container {
+  position: relative;
+  font-family: Poppins;
+  .notification {
+    margin-top: 16px;
+    display: flex;
+    padding: 10px;
+    // justify-content : center;
+    align-items: center;
+    height: 80px;
+    width: 328px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 2px 0px rgba(164, 164, 164, 0.25),
+      0px 4px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+
+    .notification-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      width: 48px;
+      border-radius: 10px;
+      background-color: rgba(224, 255, 193, 1);
+    }
+
+    .notification-text {
+      margin-left: 8px;
+
+      .notification-title {
+        font-size: 14px;
+      }
+
+      .notification-description {
+        font-size: 12px;
+        color: $gray-400;
+      }
+    }
+  }
+
+  &[data-variant="primary"] {
+    .notification-icon {
+      background-color: $primary;
+    }
+  }
+
+  &[data-variant="secondary"] {
+    .notification-icon {
+      background-color: $secondary;
+    }
+  }
+
+  &[data-variant="success"] {
+    .notification-icon {
+      background-color: rgba(224, 255, 193, 1);
+    }
+  }
+
+  &[data-variant="error"] {
+    .notification-icon {
+      background-color: #ffd7d7;
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

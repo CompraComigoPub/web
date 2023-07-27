@@ -1,0 +1,67 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__supplier-checkbox-container {
+  position: relative;
+  width: 49%;
+  margin-bottom:25px ;
+
+  .selected{
+    border: 1px solid $primary;
+
+    svg{
+      fill: $primary !important;
+      margin-left: auto;
+    }
+
+    circle,path{
+      display: block;
+    }
+  }
+
+  input{
+    display: none;
+  }
+  
+  label{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+
+    img{
+      width: 70px;
+      height: 70px;
+      background-color: $primary;
+      border-radius: 50%;
+    }
+
+    
+    div{
+      text-align:start;
+      margin-left: 15px;
+
+      p{
+        margin-bottom: 0px;
+      }
+    }
+
+    circle{
+      fill: $primary;
+      stroke: $primary;
+      display: none;
+
+    }
+    path{
+      fill: white;
+      display: none;
+    }
+
+  }
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

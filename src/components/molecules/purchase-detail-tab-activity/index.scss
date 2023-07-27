@@ -1,0 +1,62 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__purchase-detail-tab-activity-container {
+  position: relative;
+
+  .group-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: $primary;
+    margin: 3.2rem 0 1.6rem 0;
+  }
+
+  .group-entries {
+
+    .entry-card {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  
+      .entry-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .v-spacer {
+        margin-right: .8rem;
+      }
+
+      .entry-age {
+        font-size: 1rem;
+        line-height: .8rem;
+        color: $gray-500;
+      }
+    }
+
+    > :not(:last-child) > .entry-card {
+      margin-bottom: 4.8rem;
+    }
+    > :not(:last-child) > .entry-card::after {
+      content: '';
+      position: absolute;
+      left: 2rem;
+      bottom: -4rem;
+      height: 3.2rem;
+      border-right: solid .1rem $gray-200;
+    }
+  }
+
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

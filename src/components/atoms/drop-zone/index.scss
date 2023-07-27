@@ -1,0 +1,42 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__drop-zone-container {
+  position   : relative;
+  font-family: 'Poppins';
+  font-size  : 18px;
+  line-height: 24px;
+
+  .drop-zone-content,
+  .drop-zone-text {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    margin-top: 30px;
+  }
+
+  section {
+    background       : $gray-100;
+    //  opacity      : 0.2;
+    border           : 3px dashed lightgrey;
+    box-sizing       : border-box;
+    border-radius    : 20px;
+    height           : 224px;
+    width            : 432px;
+  }
+
+  .select-option {
+    font-weight: 600;
+    color      : $primary;
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    cursor: pointer;
+    
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

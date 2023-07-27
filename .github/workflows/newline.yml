@@ -1,0 +1,15 @@
+- name: newline-action
+  uses: Logerfo/newline-action@0.0.2
+on:
+  pull_request:
+    types: [synchronize, opened]
+jobs:
+  build:
+    name: New line
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@main
+      - uses: Logerfo/newline-action@0.0.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
+          ignorePaths: ["bin/**", "node_modules/**", "out/**"] # Globs to be ignored

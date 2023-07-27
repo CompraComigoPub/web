@@ -1,0 +1,105 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__purchase-intention-detail-container {
+  position     : relative;
+  width        : 944px;
+  background   : $white;
+  box-shadow   : 0px 2px 0px rgba(164, 164, 164, 0.25), 0px 4px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding      : 3.2rem;
+  font-family  : Poppins;
+
+  .title {
+    font-weight  : bold;
+    font-size    : 1.8rem;
+    color        : $primary;
+    margin-top   : 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .subtitle {
+    color      : $black;
+    font-weight: bold;
+    font-size  : 1.6rem;
+    margin-top : 1.6rem;
+  }
+
+  .subtitle-data {
+    font-size : 1.4rem;
+    color     : $gray-800;
+    margin-top: .8rem;
+  }
+
+  .infos {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+  }
+
+  .line {
+    display       : flex;
+    flex-direction: column;
+  }
+
+  .name-logo,
+  .name-description {
+    margin-left: 1rem;
+  }
+
+  .company-info {
+    display    : flex;
+    align-items: center;
+  }
+
+  .name-description {
+    font-size: 1.2rem;
+    color    : $gray-400;
+  }
+
+  .address {
+    width: 15rem;
+  }
+
+  .financial-infos {
+    hr {
+      width     : 88rem;
+      border    : 1px dashed $gray-200;
+      margin-top: 2.4rem;
+
+    }
+  }
+
+  .alert-card {
+    margin-top: 3rem;
+  }
+
+  .financial {
+    display        : flex;
+    justify-content: space-between;
+
+    #total {
+      color    : $gray-800;
+      font-size: 2.4rem;
+    }
+  }
+
+  hr {
+    width     : 880px;
+    border    : 1px solid $gray-200;
+    margin-top: 2.4rem;
+
+  }
+
+
+
+
+
+
+
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

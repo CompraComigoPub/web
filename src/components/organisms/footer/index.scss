@@ -1,0 +1,46 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__footer-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0;
+
+  height: 9rem;
+  background-color: $primary;
+  box-shadow: 3px 3px 5px rgba(57, 63, 72, 0.3);
+
+  svg {
+    width: 4rem;
+    margin: 0 auto;
+  }
+
+  span {
+    color: $white;
+    font-size: 2rem;
+    font-family: 'Roboto';
+    padding: 0 2rem;
+  }
+
+  img {
+    width: 70px
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

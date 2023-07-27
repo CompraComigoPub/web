@@ -1,0 +1,47 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__budget-action-container {
+  position: relative;
+  display: flex;
+
+  #red{
+    color: #FF0000 !important;
+  }
+
+  #card{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    section{
+      display: flex;
+
+        button:first-child{
+          background-color: #48BE00;
+          margin-right: 15px;
+        }
+    }
+
+    div{
+      margin-right: 50px;
+
+        h2{
+          color: #48BE00;
+        }
+
+        p{
+          margin: 0px;
+          white-space: nowrap;
+        }
+      }
+
+  }
+
+  
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

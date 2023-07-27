@@ -1,0 +1,66 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__alert-container {
+  position: relative;
+  align-items: stretch !important;
+  padding: 1rem 2rem 1rem 0;
+  display: flex;
+  width: 100%;
+
+  p{
+    color: black;
+    font-size: 12pt;
+    margin: 0px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  &[data-kind="warn"] {
+    .icon-container {
+      color: $color-warning;
+      border-color: $alert-orange;
+    }
+
+    h3 {
+      color: $alert-orange;
+      margin: 0;
+      font-size: 1.8rem;
+      margin-bottom: .8rem;
+    }
+  }
+
+  &[data-kind="ok"] {
+    .icon-container {
+      color: $color-success-2;
+      border-color: $alert-green;
+    }
+
+    h3 {
+      color: $alert-green;
+      margin: 0;
+      font-size: 1.8rem;
+      margin-bottom: .8rem;
+    }
+  }
+  
+  .icon-container {
+    border-left: solid 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    // height: 100%;
+    width: 8rem;
+
+    .circle {
+      background-color: currentColor;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

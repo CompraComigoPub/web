@@ -1,0 +1,17 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__menu-container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

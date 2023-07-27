@@ -1,0 +1,25 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__card-image-container {
+  position: relative;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+
+  // &[data-full] {
+  //   img {
+  //     width : 256px;
+  //     height: 120px;
+  //   }
+  // }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

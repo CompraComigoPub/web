@@ -1,0 +1,78 @@
+@import "_colors";
+@import "_mixins";
+
+.page__register-user-container {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  background-color: white;
+
+  #container {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    height: inherit;
+  }
+
+  .main-area {
+    width: 75vw;
+    background-color: white;
+    height: min-content;
+  }
+
+
+  .content-area {
+    position: relative;
+    padding: 50px 50px;
+    min-height: 100vh;
+
+    .hidden {
+      display: none;
+    }
+
+    .stepper {
+      display: flex;
+      flex-direction: row;
+      font-family: Poppins;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      gap: 8.8rem;
+      margin-bottom: 6rem;
+
+      .step-active,
+      .step-inactive {
+        display: flex;
+        cursor: default;
+        flex-direction: row;
+        align-items: center;
+
+        :first-child {
+          margin-right: 1.6rem;
+        }
+      }
+
+      .step-active {
+        cursor: pointer;
+        color: $black;
+      }
+
+      .step-inactive {
+        color: $gray-400;
+      }
+
+      .icon {
+        height: 3.2rem;
+        width: 3.2rem;
+      }
+    }
+  }
+
+    /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+   @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

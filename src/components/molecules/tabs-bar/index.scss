@@ -1,0 +1,22 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__tabs-bar-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  background-color: $white;
+  height: 5.6rem;
+  border-radius: 2.8rem;
+  box-shadow: 0px 2px 0px rgba(164, 164, 164, 0.25), 0px 4px 24px rgba(0, 0, 0, 0.05);
+  padding: .4rem;
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

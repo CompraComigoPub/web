@@ -1,0 +1,67 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__checkbox-container {
+  position: relative;
+
+  .checkbox {
+    position: relative;
+    cursor  : pointer;
+  }
+
+  .checkbox input {
+    position: absolute;
+    opacity : 0;
+
+    &:focus {
+      &+.checkmark {
+        box-shadow   : 0 0 5px $gray-600;
+        border: solid 2px $primary-client-2 !important;
+      }
+    }
+  }
+
+  .checkmark {
+    position     : absolute;
+    height       : 24px;
+    width        : 24px;
+    border       : 2px solid $secondary;
+    border-radius: 4px;
+  }
+
+  .checkbox input:not(:checked)~.checkmark {
+    border: 2px solid $gray-400;
+  }
+
+  .checkmark:after {
+    content : "";
+    position: absolute;
+    display : none;
+  }
+
+  .checkbox input:checked~.checkmark:after {
+    display: block;
+  }
+
+  .checkbox .checkmark:after {
+    position  : absolute;
+    left      : 5px;
+    top       : 9px;
+    width     : 2px;
+    height    : 2px;
+    background: $secondary;
+    box-shadow:
+      2px 0 0 $secondary,
+      4px 0 0 $secondary,
+      4px -2px 0 $secondary,
+      4px -4px 0 $secondary,
+      4px -6px 0 $secondary,
+      4px -8px 0 $secondary;
+    transform: rotate(45deg);
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

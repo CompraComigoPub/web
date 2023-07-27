@@ -1,0 +1,82 @@
+@import '_colors';
+@import '_mixins';
+
+.page__publications-approval-container {
+  position: relative;
+  margin : 5px;
+  
+  section{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  #column-1 {
+    width: 100%;
+    margin : 5px;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .tabs{
+    margin-bottom: 25px;
+  }
+
+  .card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px 0 0 15px;
+
+    #row{
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap : 12px;
+    }
+
+    #icon{
+      margin-right: 15px;
+      circle{
+      fill: #FFDFA2;  
+      }
+      path{
+      fill: #F6821F;  
+      }
+    }
+
+    #icon-reprove {
+      margin-right: 55px;
+      height : 15px;
+    }
+
+    hr{
+      opacity: 30%;
+    }
+
+    #aprove {
+      background-color: #48BE00;
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    #disaprove{
+      background-color: #FF0000;
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  h2{
+    color: $primary;
+  }
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

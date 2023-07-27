@@ -1,0 +1,29 @@
+@import "_colors";
+@import "_mixins";
+
+.page__buyer-requests-detail-container {
+  position: relative;
+
+  #button-zone {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+    button:first-child {
+      margin-right: 15px;
+      background-color: #48be00;
+    }
+  }
+
+  #card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+  }
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

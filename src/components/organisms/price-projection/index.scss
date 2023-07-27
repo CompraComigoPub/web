@@ -1,0 +1,176 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__price-projection-container {
+  position: relative;
+  margin-top: 35px;
+
+  #green{
+    background-color: #48BE00;
+    color: white;
+  }
+
+ 
+  #purchase-comments {
+    margin-bottom: 30px;
+  }
+
+  #product-name {
+    margin-left: auto;
+  }
+
+  #description {
+    width : 100%
+  }
+  
+  hr{
+    opacity: 30%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  
+  .no-space{
+    justify-content: flex-start;
+  }
+  
+
+  #top{
+    display: flex;
+    align-items: center;
+    img{
+      width: 50px;
+      height: 50px;
+      margin-right: 20px ;
+      background-color: $primary;
+      border-radius: 50%;
+    }
+  }
+
+  #close-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+    #down{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary;
+      border-radius: 50%;
+      fill: white;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    #up{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary;
+      border-radius: 50%;
+      fill: white;
+      width: 30px;
+      height: 30px;
+      transform: scaleY(-1);
+      cursor: pointer;
+    }
+  }
+
+  #form-item-close{
+    background-color: $white;
+    width: 100% !important;
+    padding: 19px;;
+    border-radius: 10px;
+    height: 80px;
+    overflow: hidden;
+
+  }
+  #form-item-open{
+    background-color: $white;
+    width: 100% !important;
+    padding: 19px;
+    border-radius: 10px;
+    height: unset;
+  }
+
+
+
+  section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top : 5px;
+
+
+    div{
+      width: 30%;
+    }
+
+    input{
+      width: 98%;
+    }
+  }
+
+  .observation-area {
+    margin-top: 20px;
+
+    #observation-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+      margin-bottom: 8px;
+    }
+
+    textarea {
+      margin-top: 8px;
+      width: 100%;
+      background: rgba(255, 255, 255, 1);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $gray-400;
+      border: 1px solid $gray-200;
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-family: Poppins;
+      padding-top: 26px;
+      padding-left: 16px;
+      resize: none;
+    }
+  }
+
+  .total{
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-top: 25px;
+    background-color: #48BE00;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    bottom: 0;
+    border-radius: 0px 0px 10px 10px;
+
+    p,h2,span{
+      color: white;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

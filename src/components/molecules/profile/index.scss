@@ -1,0 +1,104 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__profile-container {
+  position: relative;
+  display: flex;
+
+  width: 28.8rem;
+  height: 8rem;
+  background-color: $primary;
+  border-radius: 0 2rem 2rem 0;
+  padding: 1.6rem;
+  padding-left: 4.8rem;
+
+  .avatar-wrapper {
+    margin-right: 1rem;
+    margin-top: -0.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    color: $white;
+    font-weight: 700;
+    font-family: 'Poppins';
+    line-height: .8rem;
+    margin-bottom: .9rem;
+  }
+
+  h3 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: $white;
+    margin: 0;
+    line-height: .8rem;
+  }
+
+  h4 {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    text-transform: unset;
+    font-weight: 400;
+    color: $white;
+    line-height: .8rem;
+    margin-bottom: .9rem;
+  }
+
+  // TODO: add default styles (usually focused on phones)
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    border-radius: 2rem;
+    padding-left: 1.6rem;
+    align-items: center;
+
+    h3 {
+      display: none;
+    }
+
+    h4 {
+      margin-bottom: 0;
+    }
+
+    &[data-large] {
+      height: 28.8rem;
+      border-radius: 0 2rem 2rem 0;
+      align-items: start;
+      padding: 3.2rem;
+      padding-left: 4.8rem;
+
+      flex-direction: column;
+
+      h2 {
+        font-size: 2.4rem;
+        width: 11.4rem;
+        // word-break: break-all;
+        font-weight: 700;
+        font-family: 'Poppins';
+        line-height: 3.2rem;
+        margin: 1.6rem 0;
+      }
+
+      h3 {
+        display: contents;
+        font-size: 1.4rem;
+        margin: 0;
+        line-height: .8rem;
+      }
+
+      
+      h4 {
+        font-size: 1.4rem;
+        text-transform: unset;
+        margin: 1.5rem 0;
+      }
+    
+    }
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

@@ -1,0 +1,23 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__purchase-conclusion-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .título{
+    color: #F6821F !important;
+  }
+
+  p{
+    color: black !important;
+  }
+  
+  
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

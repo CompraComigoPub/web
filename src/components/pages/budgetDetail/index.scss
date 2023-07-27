@@ -1,0 +1,152 @@
+@import "_colors";
+@import "_mixins";
+
+.page__budgetDetail-container {
+  #button {
+    margin: auto;
+    margin-top: 35px;
+  }
+
+  .product-container {
+    div {
+      width: 30%;
+
+    }
+  }
+
+  #base {
+    padding: 40px;
+
+    .no-margin {
+      margin-bottom: 0px;
+    }
+
+    > h2 {
+      margin-bottom: 35px;
+    }
+
+    hr {
+      opacity: 30%;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $primary;
+      margin-right: 25px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+    }
+
+    #product {
+      color: $primary;
+      margin-top: 40px;
+    }
+
+    .dashed-bottom {
+      border-bottom: 1px dashed lightgrey;
+      margin-bottom: 20px;
+    }
+  }
+
+  .no-space {
+    justify-content: flex-start;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > p {
+      color: black;
+      font-size: 16pt;
+    }
+  }
+
+  .card-container {
+    padding: 2rem;
+  }
+
+  button:first-child{
+    background-color: #48BE00 ;
+  }
+
+  .action-container {
+    display: flex;
+  }
+  .obs {
+    width: 100%;
+  }
+
+  .observation-area {
+    width: 100%;
+    #observation-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+      margin-bottom: 8px;
+    }
+
+    textarea {
+      margin-top: 8px;
+      width: 100%;
+      margin-bottom: 25px;
+      background: rgba(255, 255, 255, 1);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $gray-400;
+      border: 1px solid $gray-200;
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-family: Poppins;
+      padding-top: 26px;
+      padding-left: 16px;
+      resize: none;
+    }
+
+    small {
+      display: none;
+    }
+  }
+
+  .red {
+    color: red !important;
+
+    span {
+      color: red !important;
+    }
+
+    textarea {
+      border: 1px solid red;
+      margin-bottom: 0px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    ::placeholder {
+      color: red;
+    }
+
+    small {
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+
+  #last {
+    margin: auto;
+    margin-top: 25px;
+  }
+}

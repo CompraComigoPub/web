@@ -1,0 +1,58 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__radio-button-container {
+  position: relative;
+
+  .radio-button input {
+    position: absolute;
+    opacity : 0;
+    cursor  : pointer;
+  }
+
+
+  .checkmark {
+    position     : absolute;
+    top          : 0;
+    left         : 0;
+    width        : 25px;
+    height       : 25px;
+    border       : 2px solid $secondary;
+    border-radius: 100%;
+    background   : #fff;
+  }
+
+  .radio-button input:not(:checked)~.checkmark {
+    border: 2px solid $gray-400;
+  }
+
+  .checkmark:after {
+    content : "";
+    position: absolute;
+    display : none;
+  }
+
+  .radio-button input:checked~.checkmark:after {
+    display: block;
+  }
+
+  .radio-button .checkmark:after {
+    width             : 9px;
+    height            : 9px;
+    left              : 29.17%;
+    right             : 30.83%;
+    top               : 29.17%;
+    bottom            : 30.83%;
+    background        : $secondary;
+    position          : absolute;
+    border-radius     : 100%;
+    -webkit-transition: all 0.2s ease;
+    transition        : all 0.2s ease;
+  }
+
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

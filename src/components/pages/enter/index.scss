@@ -1,0 +1,24 @@
+@import '_colors';
+@import '_mixins';
+
+.page__enter-container {
+  position: relative;
+  display:flex;
+  height: 100vh;
+
+  .main-area {
+    display: flex;
+    align-items:center;
+    width: calc(100vw - 450px);
+    background-color: white;
+  }
+  // TODO: add default styles (usually focused on phones)
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

@@ -1,0 +1,148 @@
+@import '_colors';
+@import '_mixins';
+
+.page__seller-budget-detail-container {
+  position: relative;
+
+  #card{
+    padding: 30px;
+  }
+
+  #conclusion > *{
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  #hidden{
+    display: none;
+  }
+
+  #header{
+    div{
+      width: 45%;
+    }
+
+    h2{
+      margin-left: auto;
+    }
+  }
+
+  svg{
+    margin-right: 15px;
+  }
+
+  hr{
+    opacity: 30%;
+    margin: 30px 0px;
+  }
+
+  .no-space{
+    justify-content: flex-start;
+  }
+
+  section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    
+
+    div,input{
+      width: 33%;
+
+      p{
+        color: black;
+        font-size: 16pt;
+      }
+    }
+
+    button:first-child{
+      background-color: #48BE00 ;
+    }
+  }
+
+  section {
+    margin-top: 20px;
+  }
+
+  .obs {
+    width: 100%;
+  }
+
+  .product-input {
+    margin-top:0 !important;
+  }
+
+
+  .observation-area {
+
+    #observation-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+      margin-bottom: 8px;
+    }
+
+    textarea {
+      margin-top: 8px;
+      width: 100%;
+      margin-bottom: 25px;
+      background: rgba(255, 255, 255, 1);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $gray-400;
+      border: 1px solid $gray-200;
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-family: Poppins;
+      padding-top: 26px;
+      padding-left: 16px;
+      resize: none;
+    }
+
+    small{
+      display: none;
+    }
+  }
+
+  
+  .red{
+    color: red !important;
+
+    span{
+      color: red !important;
+    }
+    
+    textarea{
+      border: 1px solid red;
+      margin-bottom: 0px;
+
+      &:focus{
+        outline: none;
+      }
+      
+    }
+    ::placeholder{
+      color: red;
+    }
+
+    small{
+      display: block;
+      margin-bottom: 25px;
+    }
+
+  }
+
+  #last{
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

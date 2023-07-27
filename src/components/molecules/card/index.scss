@@ -1,0 +1,225 @@
+@import "_colors";
+@import "_mixins";
+
+.molecule__card-container {
+  position: relative;
+  font-family: Poppins;
+  // margin-left: 1.6rem;
+
+  &[data-has-click] {
+    .card-box-container {
+      cursor: pointer;
+
+      &:hover {
+        border-color: $primary;
+      }
+    }
+  }
+
+  .card-box-container {
+    height: 42.2rem;
+    // width         : 30.4rem;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 2px 0px rgba(164, 164, 164, 0.25),
+      0px 4px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px transparent;
+
+    .name-logo {
+      display: flex;
+      flex-direction: row;
+      font-size: 1.2rem;
+
+      span {
+        margin-top: 0.5rem;
+        margin-left: 0.8rem;
+      }
+
+      img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+
+    .card-box-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      // margin        : 2.4rem 0 0 2.4rem;
+
+      .card-title {
+        width: 25.2rem;
+        height: 2.4rem;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 24px;
+        color: $black;
+        margin: 0.8rem 0;
+        overflow-y: auto;
+      }
+
+      .card-content {
+        font-size: 12px;
+        line-height: 16px;
+        color: $gray-400;
+        width: 25.6rem;
+        height: 5.0rem;
+        margin: 8px 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        @supports (-webkit-line-clamp: 2) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: initial;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+        // max-height: max-content;
+      }
+
+      .card-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 2.4rem;
+      }
+
+      .atom__icon-label-container {
+        margin-top: 15px;
+      }
+
+      #product-image {
+        height: 150px;
+      }
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &[data-no-image] {
+    .card-box-content {
+      .name-logo {
+        span {
+          margin-top: 1rem;
+          margin-left: 0.8rem;
+          font-size: 1.6rem;
+        }
+
+        img {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+      }
+
+      .card-title {
+        width: 25.2rem;
+        height: 2.4rem;
+        font-size: 2.4rem;
+      }
+
+      #card-footer {
+        height: 100%;
+        display: flex;
+      }
+    }
+  }
+
+  // .right-child:last-child {
+  //   margin-top: auto;
+  // }
+
+  &[data-large] {
+    // .right-child:last-child {
+    //   margin-top: auto;
+    // }
+
+    .card-box-container {
+      display: flex;
+      flex-grow: 0;
+      width: 94.4rem;
+      height: 20.8rem;
+      border-radius: 1rem;
+      margin: 2.4rem 0;
+
+      .name-logo {
+        font-size: 1.6rem;
+
+        img {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
+
+      .right-child:nth-of-type(1) {
+        order: 2;
+        margin-left: 2rem;
+      }
+
+      .right-child {
+        order: 2;
+      }
+
+      .left-child {
+        order: 1;
+      }
+
+      .card-box-content {
+        display: flex;
+        flex-flow: row wrap;
+
+        .name-logo:nth-of-type(1) {
+          order: 2;
+        }
+
+        .card-title:nth-of-type(2) {
+          order: 3;
+          font-size: 2.4rem;
+          font-weight: 700;
+          line-height: 3.2rem;
+        }
+
+        .card-content:nth-of-type(3) {
+          order: 4;
+          height: 2.5rem;
+          width: 39.8rem;
+          padding-top: 0.8rem;
+        }
+
+        .card-image:nth-of-type(4) {
+          order: 1;
+          align-items: center;
+        }
+
+        .card-footer:nth-of-type(5) {
+          order: 5;
+        }
+
+        .card-footer {
+          margin-top: -5.5rem;
+          flex-direction: row-reverse;
+          width: 80rem;
+          align-items: center;
+          justify-content: flex-start;
+
+          .atom__icon-label-container {
+            margin-left: 8.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

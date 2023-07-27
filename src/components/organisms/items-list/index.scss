@@ -1,0 +1,127 @@
+@import "_colors";
+@import "_mixins";
+
+.organism__items-list-container {
+  position: relative;
+  #tag {
+    display: flex;
+    justify-content : flex-end;
+    width : 230px;
+
+  }
+
+  .header {
+    width: 100%;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: auto 22rem;
+
+    .select-el {
+      border-radius: 1rem;
+      padding: 0.5rem;
+      border-color: $gray-200;
+      margin-left: 2rem;
+    }
+
+    #invite{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+
+
+      > button{
+        margin-top: 0px;
+        width: 100%;
+      }
+
+    }
+  }
+
+  .sub{
+    color: grey;
+    width: 38%;
+  }
+
+  .item-container-my-network {
+    justify-content: left !important;
+  }
+ 
+
+  .item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: auto 10rem 16rem 10rem;
+    margin: 2rem;
+    padding: 2rem 0;
+    border-bottom: solid 1px $gray-200;
+
+    p {
+      width: 150px;
+      font-size: 1.3rem;
+      color: $gray-500;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .date-container {
+      font-size: 1.3rem;
+      color: $gray-500;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100px;
+    }
+
+    #avatar {
+      margin-right : 20px;
+    }
+
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .action-container {
+      justify-content: flex-end;
+    }
+
+    #email{
+      margin-left: auto;
+      text-align: end;
+    }
+
+    .the-title {
+      color: $primary;
+      // white-space: nowrap;
+      // overflow: hidden;
+      width: 300px;
+    }
+
+    #column-3 {
+      display: flex;
+      flex-direction: row;
+      div:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

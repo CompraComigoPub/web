@@ -1,0 +1,28 @@
+@import '_colors';
+@import '_mixins';
+
+.page__landing-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  main {
+    margin: 0 3rem;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    main {
+      margin: 0 10rem;
+    }
+  }
+
+  @include gt-desktop{
+    main {
+      margin: 0 14rem;  
+    }
+  }
+}

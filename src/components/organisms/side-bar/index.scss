@@ -1,0 +1,90 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__side-bar-container {
+  position: sticky;
+  top: 0;
+  font-family: Poppins;
+  padding-top: 20px;
+
+  .side-bar-content {
+    height: 100%;
+    width : 330px;
+
+    .brand {
+      margin-left: 47px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .profile-session {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : flex-start;
+    color          : $white;
+    height         : 288px;
+    width          : 288px;
+    background     : $primary;
+    backdrop-filter: blur(4px);
+    border-radius  : 0px 20px 20px 0px;
+    margin-bottom  : 30px;
+
+    #avatar,
+    #name,
+    #last-name,
+    #position,
+    #company {
+      margin-left: 48px;
+      margin-top : 10px;
+
+    }
+
+    #name,
+    #last-name {
+      font-size  : 24px;
+      font-weight: bold;
+      margin-top : 5px;
+    }
+
+    #position {
+      font-size: 14px;
+    }
+
+    #company {
+      text-transform: uppercase;
+      font-weight   : bold;
+    }
+  }
+
+  .side-bar-menu {
+    margin-top: 20px;
+    padding-left: 3.4rem;
+
+    .menu-session {
+      display       : flex;
+      flex-direction: column;
+    }
+
+    hr {
+      position: absolute;
+      width   : 256px;
+      height  : 0px;
+      opacity : 0.1;
+      border  : 1px solid $gray-400;
+    }
+
+    #title {
+      color      : $primary;
+      font-size  : 24px;
+      font-weight: 700;
+      margin: 10px 0px 15px 15px
+    }
+  }
+
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

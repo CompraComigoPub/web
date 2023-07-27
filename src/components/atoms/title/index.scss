@@ -1,0 +1,24 @@
+@import '_colors';
+@import '_mixins';
+
+.atom__title-container {
+  position: relative;
+
+
+  &[data-level="1"] {
+    color      : $primary;
+    font-weight: bold;
+    font-size  : 32px;
+  }
+
+  &[data-level="2"] {
+    color      : $gray-800;
+    font-size  : 24px;
+    font-weight: bold;
+  }
+
+  &[data-level="3"] {
+    color    : $black;
+    font-size: 24px;
+  }
+}

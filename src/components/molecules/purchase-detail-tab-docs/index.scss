@@ -1,0 +1,64 @@
+@import '_colors';
+@import '_mixins';
+
+.molecule__purchase-detail-tab-docs-container {
+  position: relative;
+
+  // > :not(:last-child) > .doc-card { border-bottom: solid .1rem $gray-200; }
+
+  h3{
+    margin-left: 15px;
+  }
+  .document{
+    display: flex;
+    align-items: center;
+
+    &:hover{
+      svg:nth-child(2n){
+        display: block;
+        background-color: $primary;
+        height: 50px;
+        width: 20px;
+        border-radius: 0px 6px 6px 0px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    svg:nth-child(2n){
+      display: none;
+    }
+
+    
+  }
+
+  .doc-card {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .doc-card:hover {
+    background-color: $gray-50;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    padding-left: 2.4rem;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $gray-800;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

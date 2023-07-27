@@ -1,0 +1,37 @@
+@import "_colors";
+@import "_mixins";
+
+.atom__avatar-user-container {
+  position: relative;
+
+  .image-wrapper {
+    width: 3.2rem;
+    height: 3.2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.8rem;
+  }
+
+  @include gt-phone {
+    .image-wrapper {
+      width: 8.8rem;
+      height: 8.8rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 2rem;
+    }
+
+    &[data-smaller] {
+      .image-wrapper {
+        width: 4.8rem;
+        height: 4.8rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0.8rem;
+      }
+    }
+  }
+}

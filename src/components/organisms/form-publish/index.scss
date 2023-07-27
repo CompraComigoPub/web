@@ -1,0 +1,80 @@
+@import '_colors';
+@import '_mixins';
+
+.organism__form-publish-container {
+  position: relative;
+
+  #row{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .date{
+    max-width: 49%;
+    display: flex;
+
+  }
+
+  #form-button-input {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  #row {
+    display: flex;
+  }
+
+  #row-button {
+    margin-top:15px;
+  }
+
+
+  #back-button {
+    position: absolute;
+    bottom: 0px;
+    right: 150px;
+  }
+
+
+  h2{
+    margin-bottom : 3.2rem;
+    font-family: Poppins;
+    font-size  : 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color      : $primary;
+  }
+
+  hr{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    opacity: 30%;
+  }
+  
+  .step-container {
+    padding: 2.4rem;
+  }
+
+  .alert-el {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    color: $primary;
+    font-weight: bold;
+    display: block;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

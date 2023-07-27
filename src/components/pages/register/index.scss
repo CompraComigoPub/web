@@ -1,0 +1,30 @@
+@import '_colors';
+@import '_mixins';
+
+.page__register-container {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  background-color: white;
+
+  #container{
+    display:flex;
+    justify-self: center;
+    align-self: center;
+    height: inherit;
+  }
+
+  .main-area {
+    width: 75vw;
+    background-color: white;
+    height: min-content;
+  }
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

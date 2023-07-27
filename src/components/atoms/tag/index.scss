@@ -1,0 +1,57 @@
+@import "_colors";
+@import "_mixins";
+
+#disabled {
+  span {
+    background-color: #c5c6d0 !important;
+    color: #373737 !important;
+  }
+}
+.atom__tag-container {
+  position: relative;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 15px;
+  margin-right : 10px;
+
+  span {
+    color: $white;
+    padding: 7px 16px 7px 16px;
+    border-radius: 0.4rem;
+  }
+
+  &[data-large] {
+    span {
+      width: 6.6rem;
+      height: 3.2rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &[data-success] {
+    span {
+      background-color: $alert-green-opacity;
+      color: $alert-green;
+    }
+  }
+
+  &[data-attention] {
+    span {
+      background-color: $alert-orange-opacity;
+      color: $alert-orange;
+    }
+  }
+
+  &[data-error] {
+    span {
+      background-color: $alert-red-opacity;
+      color: $alert-red;
+    }
+  }
+
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}
